@@ -8,7 +8,7 @@ import type { Project, ProjectForm } from '../types'
 // Instance axios préconfigurée avec l'URL de base de notre API
 // Grâce au proxy dans vite.config.ts, /api est redirigé vers http://localhost:8080
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
 })
 
 // Intercepteur : avant chaque requête, on ajoute automatiquement le token JWT
