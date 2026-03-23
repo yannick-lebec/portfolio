@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+# 🖥️ Portfolio — Yannick Lebec
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personnel développé avec **Go** (backend) et **React** (frontend), présentant mon parcours et mes projets web.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👨‍💻 Qui suis-je ?
 
-## React Compiler
+Après **25 ans dans le BTP** — formation aux Compagnons du Devoir, salarié, puis chef d'entreprise et chef d'équipe — j'ai entamé une **reconversion dans le développement web** en septembre 2025 à l'**Ada Tech School** (Paris).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Mon parcours atypique m'a forgé des qualités rares dans le monde du dev : écoute du besoin client, gestion de projet, sens des responsabilités et rigueur. Je suis actuellement à la recherche d'un **stage ou d'une alternance** dans une entreprise bienveillante.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Stack technique
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Couche | Technologies |
+|--------|-------------|
+| Frontend | React 19, TypeScript, Tailwind CSS, Vite |
+| Backend | Go, Gin, GORM |
+| Base de données | PostgreSQL (Neon) |
+| Auth | JWT |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Lancer le projet en local
+
+### Prérequis
+- [Go](https://golang.org/) 1.21+
+- [Node.js](https://nodejs.org/) 18+
+- Un compte [Neon](https://neon.tech) (PostgreSQL serverless)
+
+### 1. Backend
+
+```bash
+cd backend
+cp .env.example .env
+# Remplis DATABASE_URL, JWT_SECRET et ADMIN_PASSWORD dans .env
+go run main.go
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Le serveur démarre sur **http://localhost:8080**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2. Frontend
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
+
+Le site est accessible sur **http://localhost:5173**
+
+---
+
+## 📁 Structure du projet
+
+```
+portfolio/
+├── backend/
+│   ├── main.go              # Point d'entrée + routes
+│   ├── database/db.go       # Connexion PostgreSQL (Neon)
+│   ├── models/project.go    # Modèle GORM
+│   ├── handlers/            # Logique métier (auth + projets)
+│   └── middleware/auth.go   # Protection JWT des routes admin
+└── src/
+    ├── pages/               # Home, Login, Admin
+    ├── components/          # Hero, About, Projects, Contact
+    ├── api/client.ts        # Appels vers le backend
+    └── types/               # Types TypeScript partagés
+```
+
+---
+
+## 🔐 Espace admin
+
+Accessible sur `/admin/login` — permet d'ajouter, modifier et supprimer des projets depuis une interface dédiée.
+
+---
+
+## 📬 Contact
+
+- **Email** : yannick.lebec.dev@gmail.com
+- **GitHub** : [github.com/yannick-lebec](https://github.com/yannick-lebec)
+- **LinkedIn** : [linkedin.com/in/yannick-le-bec-dev](https://www.linkedin.com/in/yannick-le-bec-dev)
