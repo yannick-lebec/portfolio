@@ -21,7 +21,7 @@ export default function Contact() {
         <p className="text-violet-400 font-medium mb-2 text-sm uppercase tracking-widest">Travaillons ensemble</p>
         <h2 className="text-3xl font-bold text-white mb-4">Contactez-moi</h2>
         <p className="text-slate-400 mb-12 text-lg">
-          Disponible pour des opportunités freelance ou en CDI.
+          Disponible pour des opportunités stage ou alternance.
           N'hésitez pas à me contacter !
         </p>
 

@@ -15,7 +15,7 @@ export default function Hero() {
             <img
               src="/Photo Avatar Yannick.png"
               alt="Yannick Lebec"
-              className="w-40 h-40 rounded-full object-cover border-4 border-violet-500/60 animate-glow"
+              className="w-56 h-56 rounded-full object-cover border-4 border-violet-500/60 animate-glow"
             />
           </div>
         </div>
