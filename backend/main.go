@@ -45,7 +45,7 @@ func main() {
 	// Configuration CORS : autorise le frontend React (port 5173) à appeler notre API
 	// Sans CORS, le navigateur bloquerait les requêtes entre localhost:5173 et localhost:8080
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:5173", "http://localhost:3000", "https://portfolio-fawn-eight-gbohkq5b5o.vercel.app"},
+		AllowOrigins:     []string{"http://localhost:5173", "http://localhost:3000", "https://yannick-le-bec.vercel.app"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
 		AllowCredentials: true,
