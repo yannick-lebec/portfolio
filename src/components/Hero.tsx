@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="animate-float">
             <img
               src="/Photo Avatar Yannick.png"
-              alt="Yannick Lebec"
+              alt="Yannick Le Bec"
               className="w-56 h-56 rounded-full object-cover border-4 border-violet-500/60 animate-glow"
             />
           </div>
@@ -30,7 +30,7 @@ export default function Hero() {
 
         {/* Nom */}
         <h1 className="animate-fade-in-up delay-200 text-5xl sm:text-6xl font-bold text-white mb-3">
-          Yannick Lebec
+          Yannick Le Bec
         </h1>
 
         {/* Titre avec dégradé */}

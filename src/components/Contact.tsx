@@ -76,7 +76,7 @@ export default function Contact() {
 
         <div className="mt-16 flex items-center justify-center gap-4">
           <p className="text-slate-700 text-sm">
-            © 2026 Yannick Lebec · Construit avec Go & React
+            © 2026 Yannick Le Bec · Construit avec Go & React
           </p>
           <a href="/admin/login" className="text-slate-800 hover:text-slate-600 text-xs transition-colors">
             Admin

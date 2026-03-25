@@ -13,8 +13,8 @@ export default function Navbar() {
 
           {/* Logo avec dégradé */}
           <Link to="/" className="font-bold text-xl text-white hover:text-violet-400 transition-colors duration-300">
-            <span className="gradient-text">YL</span>
-            <span className="text-slate-300 ml-2 font-normal text-base hidden sm:inline">Yannick Lebec</span>
+            <span className="gradient-text">YLB</span>
+            <span className="text-slate-300 ml-2 font-normal text-base hidden sm:inline">Yannick Le Bec</span>
           </Link>
 
           {/* Menu desktop */}
