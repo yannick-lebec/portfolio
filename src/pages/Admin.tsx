@@ -196,9 +196,9 @@ export default function Admin() {
                   value={form.description}
                   onChange={(e) => setForm({ ...form, description: e.target.value })}
                   required
-                  rows={3}
+                  rows={10}
                   placeholder="Description du projet..."
-                  className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg border border-gray-600 focus:border-indigo-500 focus:outline-none resize-none"
+                  className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg border border-gray-600 focus:border-indigo-500 focus:outline-none resize-y"
                 />
               </div>
 

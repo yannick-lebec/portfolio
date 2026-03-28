@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: Props) {
         <h3 className="text-white font-bold text-xl mb-2 group-hover:text-violet-400 transition-colors duration-300">
           {project.title}
         </h3>
-        <p className="text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">
+        <p className="text-slate-400 text-sm leading-relaxed mb-4">
           {project.description}
         </p>
 
