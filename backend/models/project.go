@@ -26,4 +26,6 @@ type Project struct {
 	ImageURL  string `json:"image_url"`
 	// Featured : si true, le projet est mis en avant sur la page d'accueil
 	Featured bool `json:"featured" gorm:"default:false"`
+	// Category : "web" ou "réseaux" — permet de filtrer les projets par domaine
+	Category string `json:"category" gorm:"default:'web'"`
 }

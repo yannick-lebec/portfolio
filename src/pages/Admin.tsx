@@ -14,6 +14,7 @@ const emptyForm: ProjectForm = {
   demo_url: '',
   image_url: '',
   featured: false,
+  category: 'web',
 }
 
 export default function Admin() {
@@ -92,6 +93,7 @@ export default function Admin() {
       demo_url: project.demo_url,
       image_url: project.image_url,
       featured: project.featured,
+      category: project.category || 'web',
     })
     setEditingId(project.ID)
     setShowForm(true)
@@ -249,6 +251,19 @@ export default function Admin() {
                   placeholder="https://..."
                   className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg border border-gray-600 focus:border-indigo-500 focus:outline-none"
                 />
+              </div>
+
+              {/* Catégorie */}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-1">Catégorie</label>
+                <select
+                  value={form.category}
+                  onChange={(e) => setForm({ ...form, category: e.target.value })}
+                  className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg border border-gray-600 focus:border-indigo-500 focus:outline-none"
+                >
+                  <option value="web">Développement Web</option>
+                  <option value="réseaux">Systèmes & Réseaux</option>
+                </select>
               </div>
 
               {/* Featured */}

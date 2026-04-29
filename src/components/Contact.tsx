@@ -13,12 +13,12 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-slate-900 py-24 px-4 relative overflow-hidden">
 
-      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-violet-500/30 to-transparent" />
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-violet-900/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-cyan-500/30 to-transparent" />
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-900/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-2xl mx-auto text-center relative z-10">
 
-        <p className="text-violet-400 font-medium mb-2 text-sm uppercase tracking-widest">Travaillons ensemble</p>
+        <p className="text-cyan-400 font-medium mb-2 text-sm uppercase tracking-widest">Travaillons ensemble</p>
         <h2 className="text-3xl font-bold text-white mb-4">Contactez-moi</h2>
         <p className="text-slate-400 mb-12 text-lg">
           Disponible pour des opportunités stage ou alternance.
@@ -30,7 +30,7 @@ export default function Contact() {
           {/* Bouton email : copie l'adresse au clic */}
           <button
             onClick={handleCopyEmail}
-            className="flex items-center justify-center gap-3 px-6 py-3 bg-violet-600 text-white rounded-xl font-semibold hover:bg-violet-500 transition-all hover:scale-105 shadow-lg shadow-violet-500/25 cursor-pointer"
+            className="flex items-center justify-center gap-3 px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-500 transition-all hover:scale-105 shadow-lg shadow-blue-500/25 cursor-pointer"
           >
             {copied ? (
               <>

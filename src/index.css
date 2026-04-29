@@ -17,7 +17,6 @@ body {
 
 /* ── Animations ─────────────────────────────────────────── */
 
-/* Apparition depuis le bas */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -29,29 +28,42 @@ body {
   }
 }
 
-/* Apparition simple */
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
-/* Dégradé animé en arrière-plan du hero */
 @keyframes gradientShift {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Flottement doux pour la photo */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-8px); }
 }
 
-/* Lueur pulsée sur la photo */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-12px) rotate(3deg); }
+}
+
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); }
-  50%       { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(236, 72, 153, 0.3); }
+  0%, 100% { box-shadow: 0 0 20px rgba(6, 182, 212, 0.4), 0 0 0 4px rgba(6, 182, 212, 0.15); }
+  50%       { box-shadow: 0 0 50px rgba(6, 182, 212, 0.7), 0 0 80px rgba(6, 182, 212, 0.3), 0 0 0 4px rgba(6, 182, 212, 0.25); }
+}
+
+@keyframes scanline {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 0.03; }
+  90%  { opacity: 0.03; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
 .animate-fade-in-up {
@@ -66,8 +78,16 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
 .animate-glow {
   animation: glow 3s ease-in-out infinite;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
 }
 
 /* Délais pour les animations en cascade */
@@ -78,26 +98,26 @@ body {
 .delay-500 { animation-delay: 0.5s; opacity: 0; }
 .delay-600 { animation-delay: 0.6s; opacity: 0; }
 
-/* Dégradé animé */
+/* Dégradé animé dark navy */
 .animated-gradient {
-  background: linear-gradient(-45deg, #0f0c29, #1a1040, #24243e, #1e1b4b, #2d1b69);
+  background: linear-gradient(-45deg, #050d1a, #071428, #040e1f, #060f1c, #030a14);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
 }
 
-/* Texte en dégradé violet → rose */
+/* Texte en dégradé cyan → bleu */
 .gradient-text {
-  background: linear-gradient(135deg, #a78bfa, #ec4899, #f59e0b);
+  background: linear-gradient(135deg, #22d3ee, #3b82f6, #06b6d4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Carte avec effet de survol lumineux */
+/* Carte avec effet de survol lumineux cyan */
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.15);
 }

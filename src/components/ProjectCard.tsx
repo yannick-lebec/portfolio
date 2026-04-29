@@ -30,9 +30,20 @@ export default function ProjectCard({ project }: Props) {
       )}
 
       <div className="p-6">
-        <h3 className="text-white font-bold text-xl mb-2 group-hover:text-violet-400 transition-colors duration-300">
-          {project.title}
-        </h3>
+        <div className="flex items-start justify-between gap-2 mb-2">
+          <h3 className="text-white font-bold text-xl group-hover:text-violet-400 transition-colors duration-300">
+            {project.title}
+          </h3>
+          {project.category === 'réseaux' ? (
+            <span className="shrink-0 px-2 py-0.5 bg-teal-900/50 text-teal-400 text-xs rounded-lg border border-teal-700/50">
+              Réseaux
+            </span>
+          ) : (
+            <span className="shrink-0 px-2 py-0.5 bg-blue-900/50 text-blue-400 text-xs rounded-lg border border-blue-700/50">
+              Web
+            </span>
+          )}
+        </div>
         <p className="text-slate-400 text-sm leading-relaxed mb-4">
           {project.description}
         </p>
@@ -42,7 +53,7 @@ export default function ProjectCard({ project }: Props) {
           {techs.map((tech) => (
             <span
               key={tech}
-              className="px-2.5 py-1 bg-violet-900/30 text-violet-300 text-xs rounded-lg font-medium border border-violet-700/30"
+              className="px-2.5 py-1 bg-blue-900/30 text-blue-300 text-xs rounded-lg font-medium border border-blue-700/30"
             >
               {tech}
             </span>
@@ -69,7 +80,7 @@ export default function ProjectCard({ project }: Props) {
               href={project.demo_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-xl text-sm hover:bg-violet-500 transition-colors shadow-lg shadow-violet-500/20"
+              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-xl text-sm hover:bg-blue-500 transition-colors shadow-lg shadow-blue-500/20"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

@@ -12,6 +12,7 @@ export interface Project {
   demo_url: string
   image_url: string
   featured: boolean
+  category: string     // "web" ou "réseaux"
   CreatedAt: string
   UpdatedAt: string
 }
@@ -25,4 +26,5 @@ export interface ProjectForm {
   demo_url: string
   image_url: string
   featured: boolean
+  category: string     // "web" ou "réseaux"
 }
